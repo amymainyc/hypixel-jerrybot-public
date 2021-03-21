@@ -1,14 +1,14 @@
 ## 🏰 Jerry's Skyblock
 A bot made to bring Hypixel Skyblock to the comfort of your discord server.
 
-| 💫 General Commands |
+| 💫 General Commands | |
 | --- | --- |
 | j.help	| Shows full command list. |
 | j.invite	| Sends the invite link for Jerry! |
 | j.support	| Sends the link to the support/community server. |
 | j.vote	| Sends the vote link for Jerry! |
 
-| 🌟 Skyblock Commands |
+| 🌟 Skyblock Commands | |
 | --- | --- |
 | j.skills (username) (profile)	| Returns the user's Skyblock skill levels. |
 | j.armor (username) (profile)	| Returns the user's equipped armor. |
