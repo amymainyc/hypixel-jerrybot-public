@@ -21,11 +21,11 @@ A bot made to bring Hypixel Skyblock to the comfort of your discord server.
 | j.setupreminders	| Allows you to set up Skyblock event reminders for the channel. |
 | j.disablereminders	| Allows you to disable Skyblock event reminders for the channel. |
  
-## 🎮 TopGG
+## 💠 TopGG
 View the TopGG page here: https://top.gg/bot/729064195345350668
 
 ## 🎮 Discord
 Chat with an active community of Skyblock players and/or get technical support here: https://discord.gg/EmxRs2K
 
-## 🎮 Forums
+## 📜 Forums
 View the official release post on the Hypixel forums: https://hypixel.net/threads/3439123/
