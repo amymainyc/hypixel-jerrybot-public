@@ -1,1 +1,1 @@
-# hypixel-jerrybot-public
+# Discord Bots

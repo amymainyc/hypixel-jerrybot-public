@@ -1,0 +1,302 @@
+{
+    "aspect of the dragons": {
+        "legendary": 0,
+        "mythic": 0
+    },
+    "adaptive chestplate": {
+        "any": 0
+    },
+    "adaptive leggings": {
+        "any": 0
+    },
+    "adaptive helm": {
+        "any": 0
+    },
+    "] baby yeti": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "bait ring": {
+        "any": 0
+    },
+    "beastmaster crest": {
+        "legendary": 0
+    },
+    "bits talisman": {
+        "any": 0
+    },
+    "] blaze": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "] blue whale": {
+        "legendary": 0
+    },
+    "bonzo's staff": {
+        "rare": 0,
+        "epic": 0
+    },
+    "builder's wand": {
+        "any": 0
+    },
+    "deep sea orb": {
+        "any": 0
+    },
+    "diamante's handle": {
+        "any": 0
+    },
+    "digested mosquito": {
+        "any": 0
+    },
+    "] dolphin": {
+        "legendary": 0
+    },
+    "dragon claw": {
+        "any": 0
+    },
+    "dragon horn": {
+        "any": 0
+    },
+    "] elephant": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "] ender dragon": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "] enderman": {
+        "legendary": 0
+    },
+    "ender artifact": {
+        "any": 0
+    },
+    "flower of truth": {
+        "any": 0
+    },
+    "frozen blaze helmet": {
+        "any": 0
+    },
+    "frozen blaze chestplate": {
+        "any": 0
+    },
+    "frozen blaze leggings": {
+        "any": 0
+    },
+    "frozen blaze boots": {
+        "any": 0
+    },
+    "frozen scythe": {
+        "any": 0
+    },
+    "] jellyfish": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "giant's sword": {
+        "any": 0
+    },
+    "] griffin": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "hegemony artifact": {
+        "any": 0
+    },
+    "hunter ring": {
+        "any": 0
+    },
+    "ice spray wand": {
+        "any": 0
+    },
+    "implosion": {
+        "any": 0
+    },
+    "l.a.s.r.'s eye": {
+        "any": 0
+    },
+    "last stand v": {
+        "any": 0
+    },
+    "last breath": {
+        "any": 0
+    },
+    "livid dagger": {
+        "any": 0
+    },
+    "mana flux": {
+        "any": 0
+    },
+    "necromancer lord helmet": {
+        "any": 0
+    },
+    "necromancer lord chestplate": {
+        "any": 0
+    },
+    "necromancer lord leggings": {
+        "any": 0
+    },
+    "necromancer lord boots": {
+        "any": 0
+    },
+    "necromancer sword": {
+        "any": 0
+    },
+    "necron's boots": {
+        "any": 0
+    },
+    "necron's leggings": {
+        "any": 0
+    },
+    "necron's chestplate": {
+        "any": 0
+    },
+    "necron's helmet": {
+        "any": 0
+    },
+    "overflux capacitor": {
+        "any": 0
+    },
+    "overflux power orb": {
+        "any": 0
+    },
+    "] parrot": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "pigman sword": {
+        "any": 0
+    },
+    "] phoenix": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "plasmaflux power orb": {
+        "any": 0
+    },
+    "plasma nucleus": {
+        "any": 0
+    },
+    "reaper scythe": {
+        "legendary": 0
+    },
+    "Rend V": {
+        "any": 0
+    },
+    "Replenish I": {
+        "any": 0
+    },
+    "rod of the sea": {
+        "any": 0
+    },
+    "rod of legends": {
+        "any": 0
+    },
+    "sadan's brooch": {
+        "any": 0
+    },
+    "seal of the family": {
+        "any": 0
+    },
+    "shadow assassin helmet": {
+        "any": 0
+    },
+    "shadow assassin chestplate": {
+        "any": 0
+    },
+    "shadow assassin leggings": {
+        "any": 0
+    },
+    "shadow assassin boots": {
+        "any": 0
+    },
+    "shadow fury": {
+        "any": 0
+    },
+    "shadow warp": {
+        "any": 0
+    },
+    "] sheep": {
+        "legendary": 0
+    },
+    "spirit bow": {
+        "any": 0
+    },
+    "spirit sceptre": {
+        "any": 0
+    },
+    "spirit sword": {
+        "any": 0
+    },
+    "storm's boots": {
+        "any": 0
+    },
+    "storm's leggings": {
+        "any": 0
+    },
+    "storm's chestplate": {
+        "any": 0
+    },
+    "storm's helmet": {
+        "any": 0
+    },
+    "superior dragon chestplate": {
+        "legendary": 0,
+        "mythic": 0
+    },
+    "superior dragon leggings": {
+        "legendary": 0,
+        "mythic": 0
+    },
+    "superior dragon helmet": {
+        "legendary": 0,
+        "mythic": 0
+    },
+    "superior dragon boots": {
+        "legendary": 0,
+        "mythic": 0
+    },
+    "tier boost": {
+        "any": 0
+    },
+    "] tiger": {
+        "legendary": 0
+    },
+    "treasure artifact": {
+        "any": 0
+    },
+    "treasure ring": {
+        "any": 0
+    },
+    "] turtle": {
+        "legendary": 0,
+        "epic": 0
+    },
+    "Ultimate Wise V": {
+        "any": 0
+    },
+    "warped stone": {
+        "any": 0
+    },
+    "wither artifact": {
+        "any": 0
+    },
+    "wither boots": {
+        "any": 0
+    },
+    "wither leggings": {
+        "any": 0
+    },
+    "wither chestplate": {
+        "any": 0
+    },
+    "wither helmet": {
+        "any": 0
+    },
+    "wither shield": {
+        "any": 0
+    },
+    "yeti sword": {
+        "any": 0
+    }
+}

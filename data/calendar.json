@@ -1,0 +1,72 @@
+{
+    "Bank Interest": {
+        "time": 1599893580,
+        "emojis": [
+            "\ud83d\udcb0",
+            "\ud83d\udcc8"
+        ],
+        "intervals": 111600,
+        "iterations": -1,
+        "color": "0xff4f4f"
+    },
+    "Spooky Festival": {
+        "time": 1599636780,
+        "emojis": [
+            "\ud83d\udc7b",
+            "\ud83c\udf83"
+        ],
+        "intervals": 446400,
+        "iterations": -1,
+        "color": "0xFF9422"
+    },
+    "Dark Auction": {
+        "time": 1605487980,
+        "emojis": [
+            "\ud83d\udcb8",
+            "\ud83d\udcb5"
+        ],
+        "intervals": 3600,
+        "iterations": -1,
+        "color": "0x9EFF7B"
+    },
+    "Jacob's Farming Contest": {
+        "time": 1605485580,
+        "emojis": [
+            "\ud83c\udf3e",
+            "\ud83c\udf3f"
+        ],
+        "intervals": 3600,
+        "iterations": -1,
+        "color": "0xbeff4f"
+    },
+    "Jerry Event": {
+        "time": 1599993180,
+        "emojis": [
+            "\u2603\ufe0f",
+            "\u2744\ufe0f"
+        ],
+        "intervals": 446400,
+        "iterations": -1,
+        "color": "0x8BFFF7"
+    },
+    "New Years": {
+        "time": 1600001580,
+        "emojis": [
+            "\ud83c\udf87",
+            "\ud83c\udf86"
+        ],
+        "intervals": 446400,
+        "iterations": -1,
+        "color": "0xFC8BFF"
+    },
+    "Traveling Zoo": {
+        "time": 1599893580,
+        "emojis": [
+            "\ud83d\udc12",
+            "\ud83e\udd93"
+        ],
+        "intervals": 223200,
+        "iterations": -1,
+        "color": "0xFDF360"
+    }
+}
