@@ -14,7 +14,7 @@ client.remove_command('help')
 
 def load_cogs():
     for file in os.listdir("cogs"):
-        if file.endswith("skyblock.py"):
+        if file.endswith(".py"):
             name = file[:-3]
             try:
                 client.load_extension(f"cogs.{name}")
