@@ -143,7 +143,7 @@ class Admin(commands.Cog):
         filenames = ["data/eventchannels.json"]
         for filename in filenames:
             try:
-                token = "a49812568cdaf4b13b5fca30e43f1605e82ac3c0"
+                token = database["github_oath"]
                 repo = "amymainyc/jerrybot"
                 branch = "master"
                 url = "https://api.github.com/repos/" + repo + "/contents/" + filename
@@ -181,7 +181,7 @@ class Admin(commands.Cog):
         filenames = ["data/eventchannels.json"]
         for filename in filenames:
             try:
-                token = "a49812568cdaf4b13b5fca30e43f1605e82ac3c0"
+                token = database["github_oath"]
                 repo = "amymainyc/jerrybot"
                 branch = "master"
                 url = "https://api.github.com/repos/" + repo + "/contents/" + filename
