@@ -64,3 +64,5 @@ Treasure Artifact
 Titanium Relic
 Golden Jerry Artifact
 Hegemony Artifact
+Reaper Orb
+Personal Deletor 7000
