@@ -7,9 +7,7 @@ A bot made to bring Hypixel Skyblock to the comfort of your discord server.
 | j.invite	| Sends the invite link for Jerry! |
 | j.support	| Sends the link to the support/community server. |
 | j.vote	| Sends the vote link for Jerry! |
-
 | 🌟 Skyblock Commands | |
-| :--- | --- |
 | j.skills (username) (profile)	| Returns the user's Skyblock skill levels. |
 | j.armor (username) (profile)	| Returns the user's equipped armor. |
 | j.inventory (username) (profile)	| Returns the user's inventory. |
@@ -25,7 +23,10 @@ A bot made to bring Hypixel Skyblock to the comfort of your discord server.
 View the TopGG page here: https://top.gg/bot/729064195345350668
 
 ## 🌊 Discord
-Chat with an active community of Skyblock players and/or get technical support here: https://discord.gg/EmxRs2K
+Chat with an active community of Skyblock players, get support, or make suggestions here: https://discord.gg/EmxRs2K
 
 ## ☀️ Forums
 View the official release post on the Hypixel forums: https://hypixel.net/threads/3439123/
+
+## 🌩 Trello
+View the upcoming changes coming to the bot here: https://trello.com/b/qntErh22/jerrys-skyblock
