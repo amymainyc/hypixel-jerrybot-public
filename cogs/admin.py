@@ -20,8 +20,7 @@ class Admin(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         link = database["shortlink"]
-        activity = discord.Game(name=f"j.accessories < New command!")
-        # activity = discord.Game(name=f"j.help | {link}")
+        activity = discord.Game(name=f"j.help | {link}")
         # activity = discord.Game(name="Bot testing in progress.")
         await self.client.change_presence(status=discord.Status.online, activity=activity)
         await asyncio.sleep(43200)
@@ -143,7 +142,7 @@ class Admin(commands.Cog):
         filenames = ["data/eventchannels.json"]
         for filename in filenames:
             try:
-                token = database["github_oath"]
+                token = "a49812568cdaf4b13b5fca30e43f1605e82ac3c0"
                 repo = "amymainyc/jerrybot"
                 branch = "master"
                 url = "https://api.github.com/repos/" + repo + "/contents/" + filename
@@ -181,7 +180,7 @@ class Admin(commands.Cog):
         filenames = ["data/eventchannels.json"]
         for filename in filenames:
             try:
-                token = database["github_oath"]
+                token = "a49812568cdaf4b13b5fca30e43f1605e82ac3c0"
                 repo = "amymainyc/jerrybot"
                 branch = "master"
                 url = "https://api.github.com/repos/" + repo + "/contents/" + filename

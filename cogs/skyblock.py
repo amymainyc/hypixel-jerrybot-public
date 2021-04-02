@@ -222,7 +222,7 @@ class Skyblock(commands.Cog):
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{playeruuid}?size=40&default=MHF_Steve&overlay.png")
             embed.add_field(
                 name="** **",
-                value="Also try: `j.stats`, `j.inventory`, `j.armor`, `j.dungeons`",
+                value="Also try: `j.accessories`, `j.armor`, `j.inventory`, `j.dungeons`, `j.auctions`",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -327,7 +327,7 @@ class Skyblock(commands.Cog):
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{playeruuid}?size=40&default=MHF_Steve&overlay.png")
             embed.add_field(
                 name="** **",
-                value="Also try: `j.stats`, `j.inventory`, `j.armor`, `j.dungeons`",
+                value="Also try: `j.skills`, `j.armor`, `j.inventory`, `j.dungeons`, `j.auctions`",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -398,7 +398,7 @@ class Skyblock(commands.Cog):
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{playeruuid}?size=40&default=MHF_Steve&overlay.png")
             embed.add_field(
                 name="** **",
-                value="Also try: `j.stats`, `j.skills`, `j.armor`, `j.dungeons`",
+                value="Also try: `j.skills`, `j.accessories`, `j.armor`, `j.dungeons`, `j.auctions`",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -484,7 +484,7 @@ class Skyblock(commands.Cog):
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{playeruuid}?size=40&default=MHF_Steve&overlay.png")
             embed.add_field(
                 name="** **",
-                value="Also try: `j.stats`, `j.skills`, `j.inventory`, `j.dungeons`",
+                value="Also try: `j.skills`, `j.accessories`, `j.inventory`, `j.dungeons`, `j.auctions`",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -652,7 +652,7 @@ class Skyblock(commands.Cog):
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{playeruuid}?size=40&default=MHF_Steve&overlay.png")
             embed.add_field(
                 name="** **",
-                value="Also try: `j.stats`, `j.inventory`, `j.skills`",
+                value="Also try: `j.skills`, `j.accessories`, `j.armor`, `j.inventory`, `j.auctions`",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -716,6 +716,11 @@ class Skyblock(commands.Cog):
                         inline=False)
             embed.set_footer(text="Showing " + str(len(userauctions)) + " ongoing auctions")
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{uuid}?size=500&default=MHF_Steve&overlay.png")
+            embed.add_field(
+                name="** **",
+                value="Also try: `j.skills`, `j.accessories`, `j.armor`, `j.inventory`, `j.dungeons`",
+                inline=False
+            )
 
         else:
             embed = discord.Embed(title=username + "'s Auctions", color=0xf00000)
