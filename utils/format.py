@@ -1,17 +1,11 @@
 def price_formatter(price):
     price = str(price)
-    if len(price) > 9:
-        price = price[:-3] + ',' + price[-3:]
-        price = price[:-7] + ',' + price[-7:]
-        price = price[:-10] + ',' + price[-10:]
-    elif len(price) > 6:
-        price = price[:-3] + ',' + price[-3:]
-        price = price[:-7] + ',' + price[-7:]
-    elif len(price) > 3:
-        price = price[:-3] + ',' + price[-3:]
-    else:
-        pass
-    return price
+    num = ""
+    for i in range(len(price)):
+        if len(price[len(price) - i:]) % 3 == 0 and num != "":
+            num = "," + num
+        num = price[len(price) - i - 1] + num
+    return num
 
 def item_name_formatter(item_name):
     name = ""
@@ -23,7 +17,7 @@ def item_name_formatter(item_name):
                 pass
             else:
                 name += item_name[char]
-    return name
+    return name 
 
 def enchant_formatter(enchants):
     name = []
@@ -42,18 +36,13 @@ def bz_price_formatter(price):
     price = price.split('.')
     end = price[-1]
     price = price[0]
-    if len(price) > 9:
-        price = price[:-3] + ',' + price[-3:]
-        price = price[:-7] + ',' + price[-7:]
-        price = price[:-10] + ',' + price[-10:]
-    elif len(price) > 6:
-        price = price[:-3] + ',' + price[-3:]
-        price = price[:-7] + ',' + price[-7:]
-    elif len(price) > 3:
-        price = price[:-3] + ',' + price[-3:]
-    else:
-        pass
-    return f"{price}.{end}"
+    num = ""
+    for i in range(len(price)):
+        if len(price[len(price) - i:]) % 3 == 0 and num != "":
+            num = "," + num
+        num = price[len(price) - i - 1] + num
+    return f"{num}.{end}"
+
 
 def bz_name_formatter(name):
     name = name.lower()
