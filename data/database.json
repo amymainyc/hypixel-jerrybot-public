@@ -2,7 +2,10 @@
   "token": "",
   "dbltoken": "",
   "github_oath": "",
-  "apikey": "",
+
+  "apikey1": "",
+  "apikey2": "",
+  "apikey3": "",
 
   "invitelink": "https://discordapp.com/oauth2/authorize?client_id=729064195345350668&scope=bot&permissions=0",
   "shortlink": "bit.ly/jerrys-skyblock-topgg",
