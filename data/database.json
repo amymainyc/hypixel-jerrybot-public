@@ -2,7 +2,6 @@
   "token": "",
   "dbltoken": "",
   "github_oath": "",
-
   "apikey": "",
 
   "invitelink": "https://discordapp.com/oauth2/authorize?client_id=729064195345350668&scope=bot&permissions=0",
@@ -11,8 +10,12 @@
   "supportlink": "https://discord.gg/EmxRs2K",
 
   "api_stats": "https://api.slothpixel.me/api/skyblock/profile/[uuid]/[profile]",
-  "api_dungeons": "https://api.hypixel.net/skyblock/profiles?key=0d54d295-7d38-4c97-b5e7-54060bee8814&uuid=[uuid]",
-  "api_auctions": "https://api.hypixel.net/skyblock/auctions?key=ac73f56e-fc8c-4e76-a135-f292f9eeda06&page=[page]",
-  "api_bazaar": "https://api.hypixel.net/skyblock/bazaar?key=ac73f56e-fc8c-4e76-a135-f292f9eeda06",
-  "skins": "https://crafatar.com/avatars/[uuid]?size=500&default=MHF_Steve&overlay"
+  "api_dungeons": "https://api.hypixel.net/skyblock/profiles?key=[key]&uuid=[uuid]",
+  "api_auctions": "https://api.hypixel.net/skyblock/auctions?key=[key]&page=[page]",
+  "api_bazaar": "https://api.hypixel.net/skyblock/bazaar?key=[key]",
+  "api_mcuuid": "https://api.mojang.com/user/profiles/[uuid]/names",
+  "api_mcuser": "https://api.mojang.com/users/profiles/minecraft/[user]",
+
+  "skins": "https://crafatar.com/avatars/[uuid]?size=500&default=MHF_Steve&overlay",
+  "moon_uuid": "45912a0ca620446fb63011d349f4cd5a"
 }
