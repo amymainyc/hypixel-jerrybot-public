@@ -141,12 +141,11 @@ class Auction(commands.Cog):
                                 f.write('\n'.join(pastauctions[1:]) + '\n' + uuid)
                                 f.close()
                                 channel = self.client.get_channel(712820393324445722)
-                                #channel = self.client.get_channel(749087266919678033)
                                 await channel.send(embed=embed)
 
     async def getahdata(self, page):
         async with aiohttp.ClientSession() as session:
-            async with session.get(database["api_auctions"].replace('[page]', str(page))) as data:
+            async with session.get(database["api_auctions"].replace('[page]', str(page)).replace('[key]', database["apikey1"])) as data:
                 return await data.json()
 
     def makeembed(self, player, itemname, price, tier, lowestbin):
