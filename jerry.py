@@ -2,9 +2,12 @@ import os
 from discord.ext import commands
 from loguru import logger
 import logging
+import json
 
+with open("data/database.json") as f:
+    data = json.load(f)
 
-token = 'NzI5MDY0MTk1MzQ1MzUwNjY4.XwDhpQ.SxWIR8697LGI7fk4HX1c76HqN8Q'
+token = data["token"]
 client = commands.Bot(command_prefix='j.', case_insensitive=True)
 client.remove_command('help')
 
