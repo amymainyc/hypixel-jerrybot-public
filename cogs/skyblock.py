@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from mcuuid.api import GetPlayerData
 import datetime
 from datetime import datetime
 import json
@@ -666,11 +665,12 @@ class Skyblock(commands.Cog):
 
     @commands.command(aliases=["ah"])
     async def auctions(self, ctx, username):
-        if checkusername(username) == -1:
+        mcdata = await checkusername(username)
+        if mcdata == -1:
             await ctx.send('Please enter a valid username after .auctions')
             return
-        uuid = checkusername(username)[0]
-        username = checkusername(uuid)[1]
+        uuid = mcdata[1]
+        username = mcdata[0]
 
         data = getauctiondata()
         if data == {}:
@@ -768,7 +768,7 @@ class Skyblock(commands.Cog):
                 rarity2 = rarity[0].upper() + rarity[1:]
                 embed.add_field(
                     name=rarity2,
-                    value=(str(checkusername(lowestbins[rarity]["auctioneer"])[1]) + '\n' + (price_formatter(lowestbins[rarity]["price"])) + ' coins'
+                    value=(str(await checkusername(lowestbins[rarity]["auctioneer"])[1]) + '\n' + (price_formatter(lowestbins[rarity]["price"])) + ' coins'
                            ),
                     inline=False
                 )

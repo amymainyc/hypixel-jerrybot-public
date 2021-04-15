@@ -7,13 +7,11 @@ with open('data/database.json') as d:
     database = json.load(d)
 
 class TopGG(commands.Cog):
-    """Handles interactions with the top.gg API"""
 
     def __init__(self, bot):
         self.bot = bot
-        self.token = database["dbltoken"]  # set this to your DBL token
+        self.token = database["dbltoken"]  
         self.dblpy = dbl.DBLClient(self.bot, self.token)
-        # Autopost will post your guild count every 30 minutes
 
     @commands.Cog.listener()
     async def on_ready(self):

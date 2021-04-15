@@ -1,10 +1,10 @@
 import discord
 import aiohttp
 from discord.ext import commands, tasks
-from mcuuid.api import GetPlayerData
 import json
 from loguru import logger
 import asyncio
+from utils.getdata import *
 
 with open('data/database.json') as d:
     database = json.load(d)
@@ -40,13 +40,13 @@ class Auction(commands.Cog):
 
 
     async def cacheandcheck(self):
-        sample = await self.getdata(0)
+        sample = await self.getahdata(0)
         if sample["success"] is True:
             numpages = sample["totalPages"]
             auctions = {}
             bins = {}
             for page in range(numpages):
-                data = await self.getdata(page)
+                data = await self.getahdata(page)
                 if data["success"] is True:
                     # print(page)
                     data = data["auctions"]
@@ -128,7 +128,7 @@ class Auction(commands.Cog):
                         if aimtier == "any" or aimtier in itemtier:
                             # check if prices are right
                             if itemprice <= aimbins[aimname][aimtier] * .75:
-                                auctioneer = self.uuidtousername(auction["auctioneer"])
+                                auctioneer = checkuuid(auction["auctioneer"])
                                 logger.info('Auction found by user: ' + auctioneer)
                                 embed = self.makeembed(
                                     auctioneer,
@@ -144,14 +144,10 @@ class Auction(commands.Cog):
                                 #channel = self.client.get_channel(749087266919678033)
                                 await channel.send(embed=embed)
 
-    async def getdata(self, page):
+    async def getahdata(self, page):
         async with aiohttp.ClientSession() as session:
             async with session.get(database["api_auctions"].replace('[page]', str(page))) as data:
                 return await data.json()
-
-    def uuidtousername(self, arg):
-        player = GetPlayerData(arg)
-        return player.username
 
     def makeembed(self, player, itemname, price, tier, lowestbin):
         profit = lowestbin - price
