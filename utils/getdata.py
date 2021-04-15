@@ -2,7 +2,6 @@ import aiohttp
 import json
 import discord
 from loguru import logger
-from mcuuid.api import GetPlayerData
 
 with open('data/database.json') as d:
     database = json.load(d)
@@ -10,19 +9,19 @@ with open('data/database.json') as d:
 async def checkplayer(ctx, param):
     if ctx.author.bot:
         return
-    errormessage = "Please use the proper command format: "\
-                    "\nj.stats (username) (profile)"
+    errormessage = "Please include the required fields: "\
+                    "\nj.(command) (username) (profile <optional>)"
     if len(param) != 2 and len(param) != 1:
         await ctx.send(errormessage)
         return
 
     username = param[0]
-    if checkusername(username) == -1:
-        await ctx.send('Invalid Username!')
+    mcdata = await checkusername(username)
+    if mcdata == -1:
+        await ctx.send('Please enter a valid username.')
         return
-
-    playername = checkusername(username)[1]
-    playeruuid = checkusername(username)[0]
+    playeruuid = mcdata[1]
+    playername = mcdata[0]
 
     if len(param) == 1:
         profile = ''
@@ -42,12 +41,20 @@ async def checkplayer(ctx, param):
         return
     return [playerstats, playername, playeruuid]
 
-def checkusername(arg):
-    player = GetPlayerData(arg)
-    if player.valid:
-        return [player.uuid, player.username]
-    else:
+async def checkusername(arg):
+    try: 
+        async with aiohttp.ClientSession() as session:
+            async with session.get(database["api_mcuser"].replace("[user]", arg)) as data:
+                data = await data.json()
+        return [data["name"], data["id"]]
+    except:
         return -1
+
+async def checkuuid(arg):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(database["api_mcuuid"].replace("[uuid]", arg)) as data:
+            data = await data.json()
+    return data[0]["name"]
 
 async def getstatdata(name, uuid, profile):
     link = database["api_stats"]
