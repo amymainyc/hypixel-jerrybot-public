@@ -57,9 +57,7 @@ async def checkuuid(arg):
     return data[0]["name"]
 
 async def getstatdata(name, uuid, profile):
-    link = database["api_stats"]
-    link = link.replace('[uuid]', uuid)
-    link = link.replace('[profile]', profile)
+    link = database["api_stats"].replace('[uuid]', uuid).replace('[profile]', profile)
     logger.info(f"Getting stats for {name}: {link}")
     async with aiohttp.ClientSession() as session:
         async with session.get(link) as data:
@@ -137,7 +135,7 @@ async def checkdungeonplayer(ctx, param):
     return [profile, playerstats, playername, playeruuid]
 
 async def getdungeondata(name, uuid): 
-    link = database["api_dungeons"]
+    link = database["api_dungeons"].replace('[key]', database["apikey2"])
     link = link.replace('[uuid]', uuid)
     print(f"Getting dungeon stats for {name}: {link}")
     async with aiohttp.ClientSession() as session:
@@ -146,5 +144,5 @@ async def getdungeondata(name, uuid):
 
 async def getbzdata():
         async with aiohttp.ClientSession() as session:
-            async with session.get(database["api_bazaar"]) as data:
+            async with session.get(database["api_bazaar"].replace('[key]', database["apikey2"])) as data:
                 return await data.json()
