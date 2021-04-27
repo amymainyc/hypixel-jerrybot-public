@@ -19,14 +19,6 @@ class Skyblock(commands.Cog):
 
 
 
-
-    @commands.Cog.listener()
-    async def on_ready(self):
-        print('Jerry is ready.')
-
-
-
-
     @commands.command()
     async def skills(self, ctx, *param):
         data = await checkplayer(ctx, param)
@@ -667,7 +659,7 @@ class Skyblock(commands.Cog):
     async def auctions(self, ctx, username):
         mcdata = await checkusername(username)
         if mcdata == -1:
-            await ctx.send('Please enter a valid username after .auctions')
+            await ctx.send('Invalid Username!')
             return
         uuid = mcdata[1]
         username = mcdata[0]
@@ -716,11 +708,6 @@ class Skyblock(commands.Cog):
                         inline=False)
             embed.set_footer(text="Showing " + str(len(userauctions)) + " ongoing auctions")
             embed.set_thumbnail(url=f"https://crafatar.com/avatars/{uuid}?size=500&default=MHF_Steve&overlay.png")
-            embed.add_field(
-                name="** **",
-                value="Also try: `j.skills`, `j.accessories`, `j.armor`, `j.inventory`, `j.dungeons`",
-                inline=False
-            )
 
         else:
             embed = discord.Embed(title=username + "'s Auctions", color=0xf00000)
@@ -766,10 +753,10 @@ class Skyblock(commands.Cog):
             embed.set_footer(text=f"keyword = {itemname}")
             for rarity in lowestbins:
                 rarity2 = rarity[0].upper() + rarity[1:]
+                name = await checkuuid(lowestbins[rarity]["auctioneer"])
                 embed.add_field(
                     name=rarity2,
-                    value=(str(await checkusername(lowestbins[rarity]["auctioneer"])[1]) + '\n' + (price_formatter(lowestbins[rarity]["price"])) + ' coins'
-                           ),
+                    value=(name + '\n' + price_formatter(lowestbins[rarity]["price"]) + ' coins'),
                     inline=False
                 )
             await ctx.send(embed=embed)

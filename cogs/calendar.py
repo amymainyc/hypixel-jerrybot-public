@@ -19,7 +19,8 @@ class Calendar(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         self.check_calendar.start()
-        print('Calendar is ready.')
+
+
 
     @commands.command()
     async def setupreminders(self, ctx):

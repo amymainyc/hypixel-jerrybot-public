@@ -19,6 +19,7 @@ class Admin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        print('Jerry is ready.')
         link = database["shortlink"]
         activity = discord.Game(name=f"j.help | {link}")
         # activity = discord.Game(name="Bot testing in progress.")
@@ -174,7 +175,7 @@ class Admin(commands.Cog):
 
 
     @commands.command()
-    async def pushtogit(self, ctx):
+    async def gitPush(self, ctx):
         if ctx.author != self.client.get_user(430079880353546242):
             return
         filenames = ["data/eventchannels.json"]

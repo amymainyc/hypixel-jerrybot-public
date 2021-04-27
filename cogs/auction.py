@@ -5,6 +5,7 @@ import json
 from loguru import logger
 import asyncio
 from utils.getdata import *
+from utils.format import *
 
 with open('data/database.json') as d:
     database = json.load(d)
@@ -128,7 +129,7 @@ class Auction(commands.Cog):
                         if aimtier == "any" or aimtier in itemtier:
                             # check if prices are right
                             if itemprice <= aimbins[aimname][aimtier] * .75:
-                                auctioneer = checkuuid(auction["auctioneer"])
+                                auctioneer = await checkuuid(auction["auctioneer"])
                                 logger.info('Auction found by user: ' + auctioneer)
                                 embed = self.makeembed(
                                     auctioneer,
@@ -150,9 +151,9 @@ class Auction(commands.Cog):
 
     def makeembed(self, player, itemname, price, tier, lowestbin):
         profit = lowestbin - price
-        profit = self.priceformatter(str(profit))
-        lowestbin = self.priceformatter(str(lowestbin))
-        price = self.priceformatter(str(price))
+        profit = price_formatter(profit)
+        lowestbin = price_formatter(lowestbin)
+        price = price_formatter(price)
         tier = tier[0].upper() + tier[1:]
         embed = discord.Embed(
             title='Underpriced Auction!'
@@ -162,21 +163,6 @@ class Auction(commands.Cog):
             value=f"{itemname}\nTier: {tier}\nPrice: {price} coins \n\nNext Lowest: {lowestbin} coins\nPotential Profit: {profit} coins"
         )
         return embed
-
-    def priceformatter(self, price):
-        if len(price) > 9:
-            price = price[:-3] + ',' + price[-3:]
-            price = price[:-7] + ',' + price[-7:]
-            price = price[:-10] + ',' + price[-10:]
-        elif len(price) > 6:
-            price = price[:-3] + ',' + price[-3:]
-            price = price[:-7] + ',' + price[-7:]
-        elif len(price) > 3:
-            price = price[:-3] + ',' + price[-3:]
-        else:
-            pass
-        return price
-
 
 
 

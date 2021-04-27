@@ -20,7 +20,6 @@ class Bazaar(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         self.cachebazaar.start()
-        print('Bazaar is ready.')
 
 
     

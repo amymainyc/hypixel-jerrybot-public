@@ -8,7 +8,7 @@ with open("data/database.json") as f:
     data = json.load(f)
 
 token = data["token"]
-client = commands.Bot(command_prefix='j.', case_insensitive=True)
+client = commands.Bot(command_prefix=['j.', 'J.'], case_insensitive=True)
 client.remove_command('help')
 
 
